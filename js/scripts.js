@@ -9,7 +9,7 @@ function Pizza(bigness, toppings, price) {
 
 Pizza.prototype.cost = function () {
   this.price = 10;
-  this.price += this.toppings.length();
+  this.price += this.toppings.length;
 }
 
-pizza = new Pizza("large", ["cheese", "pepperoni"], "$10");
+pizza = new Pizza("large", ["cheese", "pepperoni"], 0);
