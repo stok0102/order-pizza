@@ -4,13 +4,13 @@ $(document).ready(function() {
     event.preventDefault();
     var sizes = parseInt($("input[type='radio'][name='bigness']:checked").val());
     var toppings = []
-    $.each($("input[name='topping']:checked"), function(){
-                toppings.push($(this).val());
-            });
+    $.each($("input[name='topping']:checked"),
+          function(){
+            toppings.push($(this).val());
+          });
     pizza = new Pizza(toppings, 0)
     bigness = new Bigness(sizeArray[sizes], sizes)
     pizza.bignesses.push(bigness);
-    console.log(pizza);
     pizza.cost();
     $("ul#pies").append("<li><span class='pie'>" + pizza.bignesses[0].sizeValue + "</span></li>");
     $(".pie").last().click(function() {
