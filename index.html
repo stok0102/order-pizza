@@ -25,9 +25,9 @@
       <header>
         <h1>Order Pizza</h1>
       </header>
-      <div class="row">
+      <div class="row order-form">
         <div class="col-sm-6">
-          <form class="form-group" action="">
+          <form class="form-group" id="user-options" action="">
             <label for="bigness">Size</label><br>
             <input type="radio" name="bigness" value="1" checked> Normie<br>
             <input type="radio" name="bigness" value="0"> Puny<br>
@@ -38,11 +38,22 @@
             <input type="checkbox" name="topping" value="Meatball">Meatball<br>
             <input type="checkbox" name="topping" value="Blueberry">Blueberry<br>
             <input type="checkbox" name="topping" value="Artichoke">Artichoke<br>
-            <button type="submit" name="button">Order</button>
+            <button type="submit" name="button">Add to cart</button>
           </form>
           <ul id="pies">
 
           </ul>
+          <form id="place-order" action="index.html" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" type="text" id="name">
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input class="form-control" type="text" id="address">
+            </div>
+            <button type="submit" name="button">Place Order</button>
+          </form>
         </div>
         <div class="col-sm-6">
           <div class="show-pie">
@@ -55,6 +66,9 @@
           </div>
         </div>
       </div><!-- end row -->
+      <div class="order-complete">
+        <p> Thank you for your order, <span id="user-name"></span>. Your pie will be delivered to <span id="user-address"></span>        </p>
+      </div>
     </div> <!-- end container -->
   </body>
 </html>

@@ -1,6 +1,6 @@
 //user interface logic
 $(document).ready(function() {
-  $("form").submit(function(event) {
+  $("form#user-options").submit(function(event) {
     event.preventDefault();
     var sizes = parseInt($("input[type='radio'][name='bigness']:checked").val());
     var toppings = []
@@ -14,7 +14,6 @@ $(document).ready(function() {
     pizza.cost();
     $("ul#pies").append("<li><span class='pie'>" + pizza.bignesses[0].sizeValue + "</span></li>");
     $(".pie").last().click(function() {
-      debugger;
       $(".show-pie").show();
       $(".price").text(pizza.price);
       $(".size").text(pizza.bignesses[0].sizeValue);
@@ -24,7 +23,15 @@ $(document).ready(function() {
       });
     });
   });
-
+  $("form#place-order").submit(function(event) {
+    event.preventDefault();
+    var userName = $("input#name").val();
+    var userAddress = $("input#address").val();
+    $(".order-complete").show();
+    $(".order-form").hide();
+    $("#user-name").text(userName);
+    $("#user-address").text(userAddress);
+  });
 });
 //business logic
 function Pizza(toppings, price, bignesses) {

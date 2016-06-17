@@ -1,3 +1,22 @@
 .show-pie {
   display: none;
 }
+
+.pie:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.show-pie {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.order-complete {
+  display: none;
+  font-size: 20px;
+}
+
+body {
+  background-color: #ff9933;
+}
