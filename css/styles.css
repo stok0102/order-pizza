@@ -18,5 +18,20 @@
 }
 
 body {
-  background-color: #ff9933;
+  background-color: #ff3399;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+#user-name, #user-address {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+label {
+  font-size: 25px;
 }
