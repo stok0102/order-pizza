@@ -20,7 +20,5 @@ function Pizza(bigness, toppings, price) {
 }
 
 Pizza.prototype.cost = function () {
-  this.price = 10;
-  this.price += this.toppings.length;
-  this.price += this.bigness;
+  this.price = 10 + this.toppings.length + this.bigness;
 }
