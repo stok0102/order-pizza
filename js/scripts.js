@@ -8,7 +8,8 @@ $(document).ready(function() {
                 toppings.push($(this).val());
             });
     pizza = new Pizza(bigness, toppings, 0)
-    $("ul").append(pizza.cost());
+    pizza.cost();
+    $("ul").append("<li>This pizza will cost:" + pizza.price + "</li>");
   })
 });
 //back end logic
