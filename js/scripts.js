@@ -27,8 +27,8 @@ $(document).ready(function() {
     event.preventDefault();
     var userName = $("input#name").val();
     var userAddress = $("input#address").val();
-    $(".order-complete").show();
     $(".order-form").hide();
+    $(".order-complete").show();
     $("#user-name").text(userName);
     $("#user-address").text(userAddress);
   });

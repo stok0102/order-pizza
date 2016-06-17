@@ -5,19 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Order Pizza</title>
-
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
-
-    <!-- Jquery JS -->
     <script src="js/jquery-2.2.4.js" type="text/javascript"></script>
-
-    <!-- Custom JS -->
     <script src="js/scripts.js" type="text/javascript"></script>
-
   </head>
 
   <body>
@@ -25,24 +16,38 @@
       <header>
         <h1>Order Pizza</h1>
       </header>
-      <div class="row order-form">
-        <div class="col-sm-6">
-          <form class="form-group" id="user-options" action="">
-            <label for="bigness">Size</label><br>
-            <input type="radio" name="bigness" value="1" checked> Normie<br>
-            <input type="radio" name="bigness" value="0"> Puny<br>
-            <input type="radio" name="bigness" value="2"> Gargantuan<br>
-            <label for="topping">Toppings</label><br>
-            <input type="checkbox" name="topping" checked value="Pineapple">Pineapple<br>
-            <input type="checkbox" name="topping" value="Mushroom">Mushroom<br>
-            <input type="checkbox" name="topping" value="Meatball">Meatball<br>
-            <input type="checkbox" name="topping" value="Blueberry">Blueberry<br>
-            <input type="checkbox" name="topping" value="Artichoke">Artichoke<br>
-            <button type="submit" name="button">Add to cart</button>
-          </form>
-          <ul id="pies">
+      <div class="order-form">
+        <div class="row">
+          <div class="col-sm-4">
+            <form class="form-group" id="user-options" action="">
+              <label for="bigness">Size</label><br>
+              <input type="radio" name="bigness" value="1" checked> Normie<br>
+              <input type="radio" name="bigness" value="0"> Puny<br>
+              <input type="radio" name="bigness" value="2"> Gargantuan<br>
+              <label for="topping">Toppings</label><br>
+              <input type="checkbox" name="topping" checked value="Pineapple">Pineapple<br>
+              <input type="checkbox" name="topping" value="Mushroom">Mushroom<br>
+              <input type="checkbox" name="topping" value="Meatball">Meatball<br>
+              <input type="checkbox" name="topping" value="Blueberry">Blueberry<br>
+              <input type="checkbox" name="topping" value="Artichoke">Artichoke<br>
+              <button type="submit" name="button">Add to cart</button>
+            </form>
+          </div >
+          <div class="col-sm-4">
+            <ul id="pies">
 
-          </ul>
+            </ul>
+          </div>
+          <div class="col-sm-4 show-pie">
+            <p>Price:<span class="price"></span></p>
+            <p>Size: <span class="size"></span></p>
+            <p>Toppings:</p>
+            <ul id="toppings">
+
+            </ul>
+          </div>
+        </div><!-- end row -->
+        <div class="col-sm-4 col-sm-offset-4">
           <form id="place-order" action="index.html" method="post">
             <div class="form-group">
               <label for="name">Name</label>
@@ -55,17 +60,7 @@
             <button type="submit" name="button">Place Order</button>
           </form>
         </div>
-        <div class="col-sm-6">
-          <div class="show-pie">
-            <p>Price:<span class="price"></span></p>
-            <p>Size: <span class="size"></span></p>
-            <p>Toppings:</p>
-            <ul id="toppings">
-
-            </ul>
-          </div>
-        </div>
-      </div><!-- end row -->
+      </div>
       <div class="order-complete">
         <p> Thank you for your order, <span id="user-name"></span>. Your pie will be delivered to <span id="user-address"></span>        </p>
       </div>
