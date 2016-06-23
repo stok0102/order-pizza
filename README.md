@@ -1,6 +1,6 @@
 # Order Pizza App
 
-#### _HTML/CSS, 23 June 2016_
+#### _23 June 2016_
 
 #### By _**Caleb Stokka**_
 
