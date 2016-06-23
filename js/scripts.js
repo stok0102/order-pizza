@@ -9,6 +9,7 @@ $(document).ready(function() {
             toppings.push($(this).val());
           });
     pizza = new Pizza(toppings, 0)
+    var sizeArray = ["Small", "Medium", "Large"]
     bigness = new Bigness(sizeArray[sizes], sizes)
     pizza.bignesses.push(bigness);
     pizza.cost();
@@ -45,8 +46,7 @@ function Bigness(sizeValue, sizePrice) {
   this.sizePrice = sizePrice;
 }
 
-var sizeArray = ["Small", "Medium", "Large"]
 
-Pizza.prototype.cost = function (bigness) {
+Pizza.prototype.cost = function () {
   this.price = 10 + this.toppings.length + this.bignesses[0].sizePrice;
 }
